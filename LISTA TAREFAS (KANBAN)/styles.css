@@ -1,0 +1,124 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.kanban-column {
+    background: #e2e4e6;
+    padding: 10px;
+    border-radius: 5px;
+    width: 23%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+}
+
+.kanban-column h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.kanban-cards {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.kanban-card {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kanban-card.dragging {
+    opacity: 0.5;
+}
+
+.kanban-card button {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.kanban-card button:hover {
+    background: #c82333;
+}
+
+/* Cores específicas para cada coluna */
+.kanban-column[data-status="em-aberto"] {
+    background: #f8d7da;
+}
+
+.kanban-column[data-status="bid"] {
+    background: #fff3cd;
+}
+
+.kanban-column[data-status="em-andamento"] {
+    background: #d1ecf1;
+}
+
+.kanban-column[data-status="entregue"] {
+    background: #d4edda;
+}
